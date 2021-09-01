@@ -18,7 +18,10 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if message.content.startswith('!hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith('!about'):
+        await message.channel.send('Hi, I am the rhyho bot, I can do a variety of things, use "!help" to see all my commands')
+
+    if message.content.startswith('!help'): #Provides all commands
+        await message.channel.send('temp placeholder') #feedsback list of commands
 
 client.run(TOKEN)
