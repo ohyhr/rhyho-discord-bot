@@ -1,5 +1,6 @@
 import os
 import hikari
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -17,5 +18,6 @@ async def ping(event: hikari.GuildMessageCreateEvent) -> None:
 
     if event.content.startswith("hk.ping"):
         await event.message.respond("Pong!")
+
 
 bot.run()
