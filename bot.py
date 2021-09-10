@@ -1,17 +1,23 @@
-# bot.py
 import os
+import hikari
 
-import discord
 from dotenv import load_dotenv
 
 load_dotenv()
-#TOKEN = 'MjcyMDA1NjAwMzUzNzE0MTc2.WIIa9A.LBIQv3Ig8blKA5Clc99unSzIO3I'
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-client = discord.Client()
+bot = hikari.GatewayBot(TOKEN)
 
-@client.event
-async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+@bot.listen()
+async def ping(event: hikari.GuildMessageCreateEvent) -> None:
+    # If a non-bot user sends a message "hk.ping", respond with "Pong!"
+    # We check there is actually content first, if no message content exists,
+    # we would get `None' here.
+    if event.is_bot or not event.content:
+        return
 
-client.run(TOKEN)
+    if event.content.startswith("hk.ping"):
+        await event.message.respond("Pong!")
+
+
+bot.run()
