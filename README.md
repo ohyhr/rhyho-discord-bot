@@ -2,6 +2,7 @@
 My first discord bot, this is being built as one of my side projects during my spare time. 
 I plan on adding a few features into the bot at first and then maybe expanding upon it in the future.
 My current plans are:
+
     Logs
     Welcome Messages
     General Commands
