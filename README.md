@@ -16,4 +16,4 @@ My current plans are:
     Gambling with chat points
 
 I might aim to do more in the future but I am at least hoping to at least do 6 of them.
-Was originally going to use discord.py but since it is no longer being supported I transistioned to Hikari.
+Was originally going to use discord.py but since it is no longer being supported I transitioned to Hikari.
