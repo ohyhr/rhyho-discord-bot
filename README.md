@@ -1,5 +1,7 @@
 # rhyho-discord-bot
 
+Potentially might work on this again
+
 Taking a break from working on this project, going to wait till theres more examples out there for hikari. In the meantime I will be working on my game project.
 
 My first discord bot, this is being built as one of my side projects during my spare time. 
